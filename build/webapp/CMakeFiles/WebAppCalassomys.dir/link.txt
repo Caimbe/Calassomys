@@ -1,0 +1,2 @@
+/usr/bin/ar cr libWebAppCalassomys.a  CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o
+/usr/bin/ranlib libWebAppCalassomys.a

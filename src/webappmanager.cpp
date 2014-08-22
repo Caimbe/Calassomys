@@ -26,8 +26,9 @@ void WebAppManager::configure()
     auto webappsNames = findWebApp();
     for(string& webappName: webappsNames)
     {
-        std::shared_ptr<AppManager> webapp = loadWebApp(webappName);
-        webapp->configure(service);
+        webappName = pathBase+"/webapps/"+webappName+"/build/lib"+webappName;
+        WebAppConfigPtr config = loadWebApp(webappName);
+        config->configure(service);
     }
 }
 
@@ -56,7 +57,7 @@ std::vector<std::string> WebAppManager::findWebApp()
     return webApps;
 }
 
-std::shared_ptr<AppManager> WebAppManager::loadWebApp(std::string& name)
+WebAppConfigPtr WebAppManager::loadWebApp(std::string& name)
 {
     void *handle;
     handle = dlopen((name+SUFIX_LIB).c_str(), RTLD_NOW);
@@ -65,7 +66,7 @@ std::shared_ptr<AppManager> WebAppManager::loadWebApp(std::string& name)
         printf("The error is %s", dlerror());
     }
 
-    typedef std::shared_ptr<AppManager> create_t();
+    typedef WebAppConfigPtr create_t();
 
     create_t* creat=(create_t*)dlsym(handle,"create");
     if (!creat)

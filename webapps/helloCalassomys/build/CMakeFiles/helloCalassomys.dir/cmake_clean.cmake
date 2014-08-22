@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/helloCalassomys.dir/src/hello.cpp.o"
+  "CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o"
   "libhelloCalassomys.pdb"
   "libhelloCalassomys.so"
 )

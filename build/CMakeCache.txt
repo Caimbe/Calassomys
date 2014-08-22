@@ -203,8 +203,8 @@ Calassomys_SOURCE_DIR:STATIC=/home/ubuntu/workspace/Calassomys
 //Value Computed by CMake
 WebAppCalassomys_BINARY_DIR:STATIC=/home/ubuntu/workspace/Calassomys/build/webapp
 
-//Dependencies for target
-WebAppCalassomys_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+WebAppCalassomys_LIB_DEPENDS:STATIC=general;cppcms;
 
 //Value Computed by CMake
 WebAppCalassomys_SOURCE_DIR:STATIC=/home/ubuntu/workspace/WebAppCalassomys

@@ -75,15 +75,41 @@ CMakeFiles/helloCalassomys.dir/src/hello.cpp.o.provides: CMakeFiles/helloCalasso
 
 CMakeFiles/helloCalassomys.dir/src/hello.cpp.o.provides.build: CMakeFiles/helloCalassomys.dir/src/hello.cpp.o
 
+CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o: CMakeFiles/helloCalassomys.dir/flags.make
+CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o: ../src/webappconfig.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o -c /home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/src/webappconfig.cpp
+
+CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/src/webappconfig.cpp > CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.i
+
+CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/src/webappconfig.cpp -o CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.s
+
+CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o.requires:
+.PHONY : CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o.requires
+
+CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o.provides: CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o.requires
+	$(MAKE) -f CMakeFiles/helloCalassomys.dir/build.make CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o.provides.build
+.PHONY : CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o.provides
+
+CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o.provides.build: CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o
+
 # Object files for target helloCalassomys
 helloCalassomys_OBJECTS = \
-"CMakeFiles/helloCalassomys.dir/src/hello.cpp.o"
+"CMakeFiles/helloCalassomys.dir/src/hello.cpp.o" \
+"CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o"
 
 # External object files for target helloCalassomys
 helloCalassomys_EXTERNAL_OBJECTS =
 
 libhelloCalassomys.so: CMakeFiles/helloCalassomys.dir/src/hello.cpp.o
+libhelloCalassomys.so: CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o
 libhelloCalassomys.so: CMakeFiles/helloCalassomys.dir/build.make
+libhelloCalassomys.so: webapp/libWebAppCalassomys.a
 libhelloCalassomys.so: CMakeFiles/helloCalassomys.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library libhelloCalassomys.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/helloCalassomys.dir/link.txt --verbose=$(VERBOSE)
@@ -93,6 +119,7 @@ CMakeFiles/helloCalassomys.dir/build: libhelloCalassomys.so
 .PHONY : CMakeFiles/helloCalassomys.dir/build
 
 CMakeFiles/helloCalassomys.dir/requires: CMakeFiles/helloCalassomys.dir/src/hello.cpp.o.requires
+CMakeFiles/helloCalassomys.dir/requires: CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o.requires
 .PHONY : CMakeFiles/helloCalassomys.dir/requires
 
 CMakeFiles/helloCalassomys.dir/clean:

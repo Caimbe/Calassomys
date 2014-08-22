@@ -151,6 +151,30 @@ src/hello.cpp.s:
 	$(MAKE) -f CMakeFiles/helloCalassomys.dir/build.make CMakeFiles/helloCalassomys.dir/src/hello.cpp.s
 .PHONY : src/hello.cpp.s
 
+src/webappconfig.o: src/webappconfig.cpp.o
+.PHONY : src/webappconfig.o
+
+# target to build an object file
+src/webappconfig.cpp.o:
+	$(MAKE) -f CMakeFiles/helloCalassomys.dir/build.make CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o
+.PHONY : src/webappconfig.cpp.o
+
+src/webappconfig.i: src/webappconfig.cpp.i
+.PHONY : src/webappconfig.i
+
+# target to preprocess a source file
+src/webappconfig.cpp.i:
+	$(MAKE) -f CMakeFiles/helloCalassomys.dir/build.make CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.i
+.PHONY : src/webappconfig.cpp.i
+
+src/webappconfig.s: src/webappconfig.cpp.s
+.PHONY : src/webappconfig.s
+
+# target to generate assembly for a file
+src/webappconfig.cpp.s:
+	$(MAKE) -f CMakeFiles/helloCalassomys.dir/build.make CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.s
+.PHONY : src/webappconfig.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +188,9 @@ help:
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"
+	@echo "... src/webappconfig.o"
+	@echo "... src/webappconfig.i"
+	@echo "... src/webappconfig.s"
 .PHONY : help
 
 

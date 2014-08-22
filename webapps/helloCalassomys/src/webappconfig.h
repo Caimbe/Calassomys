@@ -1,10 +1,13 @@
 #ifndef WEBAPPCONFIG_H
 #define WEBAPPCONFIG_H
 
-class WebAppConfig
+#include <iwebappconfig.h>
+
+class WebAppConfig : public iWebAppConfig
 {
 public:
     WebAppConfig();
+    void configure(ServicePtr& service);
 };
 
 #endif // WEBAPPCONFIG_H

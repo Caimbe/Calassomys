@@ -176,8 +176,8 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Value Computed by CMake
 WebAppCalassomys_BINARY_DIR:STATIC=/home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/build/webapp
 
-//Dependencies for target
-WebAppCalassomys_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+WebAppCalassomys_LIB_DEPENDS:STATIC=general;cppcms;
 
 //Value Computed by CMake
 WebAppCalassomys_SOURCE_DIR:STATIC=/home/ubuntu/workspace/WebAppCalassomys
@@ -185,8 +185,8 @@ WebAppCalassomys_SOURCE_DIR:STATIC=/home/ubuntu/workspace/WebAppCalassomys
 //Value Computed by CMake
 helloCalassomys_BINARY_DIR:STATIC=/home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/build
 
-//Dependencies for target
-helloCalassomys_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+helloCalassomys_LIB_DEPENDS:STATIC=general;WebAppCalassomys;
 
 //Value Computed by CMake
 helloCalassomys_SOURCE_DIR:STATIC=/home/ubuntu/workspace/Calassomys/webapps/helloCalassomys

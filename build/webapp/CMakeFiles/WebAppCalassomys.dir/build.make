@@ -52,9 +52,32 @@ include webapp/CMakeFiles/WebAppCalassomys.dir/progress.make
 # Include the compile flags for this target's objects.
 include webapp/CMakeFiles/WebAppCalassomys.dir/flags.make
 
+webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o: webapp/CMakeFiles/WebAppCalassomys.dir/flags.make
+webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o: /home/ubuntu/workspace/WebAppCalassomys/src/iwebappconfig.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/workspace/Calassomys/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o"
+	cd /home/ubuntu/workspace/Calassomys/build/webapp && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o -c /home/ubuntu/workspace/WebAppCalassomys/src/iwebappconfig.cpp
+
+webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.i"
+	cd /home/ubuntu/workspace/Calassomys/build/webapp && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/workspace/WebAppCalassomys/src/iwebappconfig.cpp > CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.i
+
+webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.s"
+	cd /home/ubuntu/workspace/Calassomys/build/webapp && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/workspace/WebAppCalassomys/src/iwebappconfig.cpp -o CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.s
+
+webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o.requires:
+.PHONY : webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o.requires
+
+webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o.provides: webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o.requires
+	$(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o.provides.build
+.PHONY : webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o.provides
+
+webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o.provides.build: webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o
+
 webapp/CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o: webapp/CMakeFiles/WebAppCalassomys.dir/flags.make
 webapp/CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o: /home/ubuntu/workspace/WebAppCalassomys/src/webapp.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/workspace/Calassomys/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/workspace/Calassomys/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object webapp/CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o"
 	cd /home/ubuntu/workspace/Calassomys/build/webapp && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o -c /home/ubuntu/workspace/WebAppCalassomys/src/webapp.cpp
 
@@ -77,11 +100,13 @@ webapp/CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o.provides.build: webapp/C
 
 # Object files for target WebAppCalassomys
 WebAppCalassomys_OBJECTS = \
+"CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o" \
 "CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o"
 
 # External object files for target WebAppCalassomys
 WebAppCalassomys_EXTERNAL_OBJECTS =
 
+webapp/libWebAppCalassomys.a: webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o
 webapp/libWebAppCalassomys.a: webapp/CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o
 webapp/libWebAppCalassomys.a: webapp/CMakeFiles/WebAppCalassomys.dir/build.make
 webapp/libWebAppCalassomys.a: webapp/CMakeFiles/WebAppCalassomys.dir/link.txt
@@ -93,6 +118,7 @@ webapp/libWebAppCalassomys.a: webapp/CMakeFiles/WebAppCalassomys.dir/link.txt
 webapp/CMakeFiles/WebAppCalassomys.dir/build: webapp/libWebAppCalassomys.a
 .PHONY : webapp/CMakeFiles/WebAppCalassomys.dir/build
 
+webapp/CMakeFiles/WebAppCalassomys.dir/requires: webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o.requires
 webapp/CMakeFiles/WebAppCalassomys.dir/requires: webapp/CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o.requires
 .PHONY : webapp/CMakeFiles/WebAppCalassomys.dir/requires
 

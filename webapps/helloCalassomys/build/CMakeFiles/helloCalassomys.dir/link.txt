@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC  -g -Wall -std=c++11   -shared -Wl,-soname,libhelloCalassomys.so -o libhelloCalassomys.so CMakeFiles/helloCalassomys.dir/src/hello.cpp.o 
+/usr/bin/c++  -fPIC  -g -Wall -fPIC -std=c++11   -shared -Wl,-soname,libhelloCalassomys.so -o libhelloCalassomys.so CMakeFiles/helloCalassomys.dir/src/hello.cpp.o CMakeFiles/helloCalassomys.dir/src/webappconfig.cpp.o webapp/libWebAppCalassomys.a -lcppcms 

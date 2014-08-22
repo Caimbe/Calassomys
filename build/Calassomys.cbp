@@ -144,6 +144,8 @@
       </Unit>
       <Unit filename="/home/ubuntu/workspace/Calassomys/src/webappmanager.cpp">
       </Unit>
+      <Unit filename="/home/ubuntu/workspace/WebAppCalassomys/src/iwebappconfig.cpp">
+      </Unit>
       <Unit filename="/home/ubuntu/workspace/WebAppCalassomys/src/webapp.cpp">
       </Unit>
       <Unit filename="/home/ubuntu/workspace/Calassomys/src/webappmanager.h">

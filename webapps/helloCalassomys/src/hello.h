@@ -6,8 +6,9 @@
 class Hello : public WebApp
 {
 public:
-    Hello();
+    Hello(cppcms::service& srv);
+    void homer();
+    void smile();
 };
-_WebApp("/hello",Hello)
 
 #endif // HELLO_H

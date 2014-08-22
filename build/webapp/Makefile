@@ -115,6 +115,30 @@ WebAppCalassomys/fast:
 	cd /home/ubuntu/workspace/Calassomys/build && $(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/build
 .PHONY : WebAppCalassomys/fast
 
+src/iwebappconfig.o: src/iwebappconfig.cpp.o
+.PHONY : src/iwebappconfig.o
+
+# target to build an object file
+src/iwebappconfig.cpp.o:
+	cd /home/ubuntu/workspace/Calassomys/build && $(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o
+.PHONY : src/iwebappconfig.cpp.o
+
+src/iwebappconfig.i: src/iwebappconfig.cpp.i
+.PHONY : src/iwebappconfig.i
+
+# target to preprocess a source file
+src/iwebappconfig.cpp.i:
+	cd /home/ubuntu/workspace/Calassomys/build && $(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.i
+.PHONY : src/iwebappconfig.cpp.i
+
+src/iwebappconfig.s: src/iwebappconfig.cpp.s
+.PHONY : src/iwebappconfig.s
+
+# target to generate assembly for a file
+src/iwebappconfig.cpp.s:
+	cd /home/ubuntu/workspace/Calassomys/build && $(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.s
+.PHONY : src/iwebappconfig.cpp.s
+
 src/webapp.o: src/webapp.cpp.o
 .PHONY : src/webapp.o
 
@@ -148,6 +172,9 @@ help:
 	@echo "... WebAppCalassomys"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/iwebappconfig.o"
+	@echo "... src/iwebappconfig.i"
+	@echo "... src/iwebappconfig.s"
 	@echo "... src/webapp.o"
 	@echo "... src/webapp.i"
 	@echo "... src/webapp.s"

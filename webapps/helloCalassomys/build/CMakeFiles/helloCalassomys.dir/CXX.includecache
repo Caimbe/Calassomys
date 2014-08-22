@@ -6,15 +6,27 @@
 
 #IncludeRegexTransform: 
 
-../../../../WebAppCalassomys/include/webapp.h
-memory
--
+../../../../WebAppCalassomys/include/iwebappconfig.h
 cppcms/service.h
 -
 cppcms/application.h
 -
 cppcms/applications_pool.h
 -
+
+../../../../WebAppCalassomys/include/webapp.h
+memory
+-
+cppcms/url_dispatcher.h
+-
+cppcms/url_mapper.h
+-
+cppcms/http_request.h
+-
+cppcms/http_response.h
+-
+iwebappconfig.h
+../../../../WebAppCalassomys/include/iwebappconfig.h
 
 /home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/src/hello.cpp
 hello.h

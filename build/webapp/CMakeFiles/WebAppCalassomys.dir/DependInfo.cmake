@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/ubuntu/workspace/WebAppCalassomys/src/iwebappconfig.cpp" "/home/ubuntu/workspace/Calassomys/build/webapp/CMakeFiles/WebAppCalassomys.dir/src/iwebappconfig.cpp.o"
   "/home/ubuntu/workspace/WebAppCalassomys/src/webapp.cpp" "/home/ubuntu/workspace/Calassomys/build/webapp/CMakeFiles/WebAppCalassomys.dir/src/webapp.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")

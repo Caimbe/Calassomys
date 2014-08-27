@@ -3,17 +3,9 @@
 
 WebAppConfig::WebAppConfig(cppcms::service &srv) : calassomys::WebApp(srv)
 {
-    attach(	new Hello(srv),
-            "hello",
-            "/{1}",
-            "(/(\\d+)?)?",2);
-
+    attach(	new Hello(srv));
 }
 
-WebAppConfig::~WebAppConfig()
-{
-
-}
 
 extern "C" calassomys::WebAppPtr create(cppcms::service& srv)
 {

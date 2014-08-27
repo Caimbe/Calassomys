@@ -7,7 +7,6 @@ class WebAppConfig : public calassomys::WebApp
 {
 public:
     WebAppConfig(cppcms::service &srv);
-    ~WebAppConfig();
 
 };
 

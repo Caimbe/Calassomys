@@ -2,7 +2,7 @@
 
 Hello::Hello(cppcms::service& srv) : WebApp(srv)
 {
-    dispatcher().assign("",&Hello::homer,this);
+    dispatcher().assign("/homer",&Hello::homer,this);
     dispatcher().assign("/smile",&Hello::smile,this);
 }
 

@@ -9,7 +9,7 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 target_link_libraries(${PROJECT_NAME} cppcms ${Boost_LIBRARIES} WebAppCalassomys)
 
 if(UNIX)
-    add_definitions(-DSUFIX_LIB=".so")
+    add_definitions(-DSUFIX_LIB=".so" -DPREFIX_LIB="lib")
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -std=c++11")
     target_link_libraries(${PROJECT_NAME} dl)
 endif()

@@ -1,2 +1,0 @@
-/home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/build/webapp/CMakeFiles/WebAppCalassomys.dir
-/home/ubuntu/workspace/Calassomys/webapps/helloCalassomys/build/CMakeFiles/helloCalassomys.dir

@@ -1,22 +1,21 @@
 #ifndef WEBAPPMANAGER_H
 #define WEBAPPMANAGER_H
 
-#include <cppcms/service.h>
-#include <string>
-#include <iwebappconfig.h>
+#include <cppcms/application.h>
+#include <webapp.h>
 
-class WebAppManager
+namespace calassomys {
+
+class WebAppManager : public cppcms::application
 {
-    ServicePtr service;
-    std::string pathBase;
 public:
-    WebAppManager(std::string pathBase);
-    void run();
-
+    WebAppManager(cppcms::service &service);
 private:
-    void configure();
+    void configure(cppcms::service &srv);
     std::vector<std::string> findWebApp();
-    WebAppConfigPtr loadWebApp(std::string& name);
+    WebAppPtr loadWebApp(std::string& path, std::string& name, cppcms::service &srv);
 };
+
+} // calassomys
 
 #endif // WEBAPPMANAGER_H

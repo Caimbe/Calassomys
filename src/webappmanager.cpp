@@ -1,41 +1,37 @@
 #include "webappmanager.h"
 #include <boost/filesystem.hpp>
-#include<dlfcn.h>
+#include <cppcms/json.h>
+#include <dlfcn.h>
 #include <fstream>
 
 using namespace std;
 
-WebAppManager::WebAppManager(std::string path)
+namespace calassomys {
+
+WebAppManager::WebAppManager(cppcms::service &srv) : cppcms::application(srv)
 {
-    pathBase = path.substr(0, path.rfind('/'));
-    pathBase = pathBase.substr(0, pathBase.rfind('/'));
-    ifstream fileSetting(pathBase+"/etc/calassomys.conf");
-    cppcms::json::value settings;
-    settings.load(fileSetting, true);
-    service.reset( new cppcms::service(settings) );
-    configure();
+    configure(srv);
 }
 
-void WebAppManager::run()
-{
-    service->run();
-}
-
-void WebAppManager::configure()
+void WebAppManager::configure(cppcms::service &srv)
 {
     auto webappsNames = findWebApp();
-    for(string& webappName: webappsNames)
+    for(string& name: webappsNames)
     {
-        webappName = pathBase+"/webapps/"+webappName+"/build/lib"+webappName;
-        WebAppConfigPtr config = loadWebApp(webappName);
-        config->configure(service);
+        string path = settings().get<string>("calassomys.path_webapps") + "/" +name+ "/build/";
+        WebAppPtr webApp = loadWebApp(path, name, srv);
+        attach(	webApp,
+                name,
+                "/"+name+"{1}", // mapping
+                "/"+name+"(/(.*))?", 1);   // dispatching
     }
 }
+
 
 std::vector<std::string> WebAppManager::findWebApp()
 {
     using namespace boost::filesystem;
-    string strDirWebApps = pathBase+"/webapps";
+    string strDirWebApps = settings().get<string>("calassomys.path_webapps");
     path dirWebApp(strDirWebApps);
     if (!exists(dirWebApp) || !is_directory(dirWebApp)) {
         std::cerr << strDirWebApps << " not found" << std::endl;
@@ -57,21 +53,23 @@ std::vector<std::string> WebAppManager::findWebApp()
     return webApps;
 }
 
-WebAppConfigPtr WebAppManager::loadWebApp(std::string& name)
+WebAppPtr WebAppManager::loadWebApp(std::string& path, std::string& name, cppcms::service &srv)
 {
     void *handle;
-    handle = dlopen((name+SUFIX_LIB).c_str(), RTLD_NOW);
+    handle = dlopen((path+PREFIX_LIB+name+SUFIX_LIB).c_str(), RTLD_NOW);
     if (!handle)
     {
         printf("The error is %s", dlerror());
     }
 
-    typedef WebAppConfigPtr create_t();
+    typedef WebAppPtr create_t(cppcms::service&);
 
     create_t* creat=(create_t*)dlsym(handle,"create");
     if (!creat)
     {
         cerr<<"The error is %s"<<dlerror();
     }
-    return creat();
+    return creat(srv);
+}
+
 }

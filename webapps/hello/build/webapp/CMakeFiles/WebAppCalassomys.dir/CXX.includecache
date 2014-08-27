@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/workspace/WebAppCalassomys/./include/webapp.h
+memory
+-
+cppcms/url_dispatcher.h
+-
+cppcms/url_mapper.h
+-
+cppcms/http_request.h
+-
+cppcms/http_response.h
+-
+
+/home/ubuntu/workspace/WebAppCalassomys/src/webapp.cpp
+include/webapp.h
+/home/ubuntu/workspace/WebAppCalassomys/src/include/webapp.h
+

@@ -1,23 +1,30 @@
 #include <cppcms/service.h>
 #include <cppcms/applications_pool.h>
 #include <iostream>
-
+#include <fstream>
 #include "webappmanager.h"
 
 using namespace std;
+using namespace calassomys;
 
-
-int main(int argc, char** argv)
+int main(int argc,char ** argv)
 {
-    cout << "Server Up!" << endl;
     try {
-        WebAppManager manager(argv[0]);
-        manager.run();
+        string pathBase = argv[0];
+        pathBase = pathBase.substr(0, pathBase.rfind('/'));
+        pathBase = pathBase.substr(0, pathBase.rfind('/'));
+        ifstream fileSetting(pathBase+"/etc/calassomys.conf");
+        cppcms::json::value settings;
+        settings.load(fileSetting, true);
+        cppcms::service service(settings);
+        settings["path_run_time"] = pathBase;
+        service.applications_pool().mount(cppcms::applications_factory<WebAppManager>());
+        service.run();
     }
     catch(std::exception const &e) {
-        std::cerr << e.what() << std::endl;
+        std::cerr<<e.what()<<std::endl;
     }
-    cout << "Server Dow!" << endl;
-    return 0;
+    catch(...) {
+        std::cerr<<"Erro Desconhecido!"<<std::endl;
+    }
 }
-

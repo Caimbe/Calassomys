@@ -18,10 +18,6 @@ cppcms/http_request.h
 cppcms/http_response.h
 -
 
-/home/ubuntu/workspace/Calassomys/webapps/hello/src/hello.cpp
-hello.h
-/home/ubuntu/workspace/Calassomys/webapps/hello/src/hello.h
-
 /home/ubuntu/workspace/Calassomys/webapps/hello/src/hello.h
 webapp.h
 -
@@ -31,6 +27,10 @@ webappconfig.h
 /home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.h
 hello.h
 /home/ubuntu/workspace/Calassomys/webapps/hello/src/hello.h
+fstream
+-
+cppcms/json.h
+-
 
 /home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.h
 webapp.h

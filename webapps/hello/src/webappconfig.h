@@ -5,11 +5,12 @@
 
 class WebAppConfig : public calassomys::WebApp
 {
+    std::string nameWebApp;
 public:
-    WebAppConfig(cppcms::service &srv);
+    WebAppConfig(cppcms::service &srv, std::string& nameWebApp);
+    void serveFile(std::string file_name);
 
 };
 
-extern "C" calassomys::WebAppPtr create(cppcms::service& srv);
 
 #endif // WEBAPPCONFIG_H

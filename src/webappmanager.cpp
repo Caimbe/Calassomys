@@ -3,6 +3,7 @@
 #include <cppcms/json.h>
 #include <dlfcn.h>
 #include <fstream>
+#include <booster/log.h>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ void WebAppManager::configure(cppcms::service &srv)
     auto webappsNames = findWebApp();
     for(string& name: webappsNames)
     {
+        cout << "Loading: " << name << endl;
         string path = settings().get<string>("calassomys.path_webapps") + "/" +name+ "/build/";
         WebAppPtr webApp = loadWebApp(path, name, srv);
         attach(	webApp,
@@ -46,7 +48,6 @@ std::vector<std::string> WebAppManager::findWebApp()
     {
         if (is_directory (dir_itr->status())){
             std::string str = dir_itr->path().filename().c_str();
-            std::cout <<  str << std::endl;
             webApps.push_back( str );
         }
     }
@@ -62,14 +63,14 @@ WebAppPtr WebAppManager::loadWebApp(std::string& path, std::string& name, cppcms
         printf("The error is %s", dlerror());
     }
 
-    typedef WebAppPtr create_t(cppcms::service&);
+    typedef WebAppPtr create_t(cppcms::service&, std::string&);
 
     create_t* creat=(create_t*)dlsym(handle,"create");
     if (!creat)
     {
         cerr<<"The error is %s"<<dlerror();
     }
-    return creat(srv);
+    return creat(srv, name);
 }
 
 }

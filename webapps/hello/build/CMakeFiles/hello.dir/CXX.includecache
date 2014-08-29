@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../../../../WebAppCalassomys/include/loadwebapp.h
+webapp.h
+-
+
 ../../../../WebAppCalassomys/include/webapp.h
 memory
 -
@@ -22,17 +26,9 @@ cppcms/http_response.h
 webapp.h
 -
 
-/home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.cpp
-webappconfig.h
-/home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.h
+/home/ubuntu/workspace/Calassomys/webapps/hello/src/loadwebapp.cpp
+loadwebapp.h
+-
 hello.h
 /home/ubuntu/workspace/Calassomys/webapps/hello/src/hello.h
-fstream
--
-cppcms/json.h
--
-
-/home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.h
-webapp.h
--
 

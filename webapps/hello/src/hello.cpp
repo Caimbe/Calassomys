@@ -58,3 +58,5 @@ void Hello::smile()
     response().out() << ":-) <br/>" << request().get("asdf");
     response().out() << "<a href='" << url("/") << "'>Go back</a>";
 }
+
+

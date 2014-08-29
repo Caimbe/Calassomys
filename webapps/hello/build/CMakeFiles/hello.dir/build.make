@@ -75,39 +75,39 @@ CMakeFiles/hello.dir/src/hello.cpp.o.provides: CMakeFiles/hello.dir/src/hello.cp
 
 CMakeFiles/hello.dir/src/hello.cpp.o.provides.build: CMakeFiles/hello.dir/src/hello.cpp.o
 
-CMakeFiles/hello.dir/src/webappconfig.cpp.o: CMakeFiles/hello.dir/flags.make
-CMakeFiles/hello.dir/src/webappconfig.cpp.o: ../src/webappconfig.cpp
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o: ../src/loadwebapp.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/workspace/Calassomys/webapps/hello/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hello.dir/src/webappconfig.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/webappconfig.cpp.o -c /home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hello.dir/src/loadwebapp.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/loadwebapp.cpp.o -c /home/ubuntu/workspace/Calassomys/webapps/hello/src/loadwebapp.cpp
 
-CMakeFiles/hello.dir/src/webappconfig.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/webappconfig.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.cpp > CMakeFiles/hello.dir/src/webappconfig.cpp.i
+CMakeFiles/hello.dir/src/loadwebapp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/loadwebapp.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/workspace/Calassomys/webapps/hello/src/loadwebapp.cpp > CMakeFiles/hello.dir/src/loadwebapp.cpp.i
 
-CMakeFiles/hello.dir/src/webappconfig.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/webappconfig.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.cpp -o CMakeFiles/hello.dir/src/webappconfig.cpp.s
+CMakeFiles/hello.dir/src/loadwebapp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/loadwebapp.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/workspace/Calassomys/webapps/hello/src/loadwebapp.cpp -o CMakeFiles/hello.dir/src/loadwebapp.cpp.s
 
-CMakeFiles/hello.dir/src/webappconfig.cpp.o.requires:
-.PHONY : CMakeFiles/hello.dir/src/webappconfig.cpp.o.requires
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o.requires:
+.PHONY : CMakeFiles/hello.dir/src/loadwebapp.cpp.o.requires
 
-CMakeFiles/hello.dir/src/webappconfig.cpp.o.provides: CMakeFiles/hello.dir/src/webappconfig.cpp.o.requires
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/webappconfig.cpp.o.provides.build
-.PHONY : CMakeFiles/hello.dir/src/webappconfig.cpp.o.provides
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o.provides: CMakeFiles/hello.dir/src/loadwebapp.cpp.o.requires
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/loadwebapp.cpp.o.provides.build
+.PHONY : CMakeFiles/hello.dir/src/loadwebapp.cpp.o.provides
 
-CMakeFiles/hello.dir/src/webappconfig.cpp.o.provides.build: CMakeFiles/hello.dir/src/webappconfig.cpp.o
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o.provides.build: CMakeFiles/hello.dir/src/loadwebapp.cpp.o
 
 # Object files for target hello
 hello_OBJECTS = \
 "CMakeFiles/hello.dir/src/hello.cpp.o" \
-"CMakeFiles/hello.dir/src/webappconfig.cpp.o"
+"CMakeFiles/hello.dir/src/loadwebapp.cpp.o"
 
 # External object files for target hello
 hello_EXTERNAL_OBJECTS =
 
 libhello.so: CMakeFiles/hello.dir/src/hello.cpp.o
-libhello.so: CMakeFiles/hello.dir/src/webappconfig.cpp.o
+libhello.so: CMakeFiles/hello.dir/src/loadwebapp.cpp.o
 libhello.so: CMakeFiles/hello.dir/build.make
 libhello.so: webapp/libWebAppCalassomys.a
 libhello.so: CMakeFiles/hello.dir/link.txt
@@ -119,7 +119,7 @@ CMakeFiles/hello.dir/build: libhello.so
 .PHONY : CMakeFiles/hello.dir/build
 
 CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/hello.cpp.o.requires
-CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/webappconfig.cpp.o.requires
+CMakeFiles/hello.dir/requires: CMakeFiles/hello.dir/src/loadwebapp.cpp.o.requires
 .PHONY : CMakeFiles/hello.dir/requires
 
 CMakeFiles/hello.dir/clean:

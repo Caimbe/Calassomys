@@ -140,13 +140,13 @@
       </Build>
       <Unit filename="/home/ubuntu/workspace/Calassomys/webapps/hello/src/hello.cpp">
       </Unit>
-      <Unit filename="/home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.cpp">
+      <Unit filename="/home/ubuntu/workspace/Calassomys/webapps/hello/src/loadwebapp.cpp">
+      </Unit>
+      <Unit filename="/home/ubuntu/workspace/WebAppCalassomys/src/loadwebapp.cpp">
       </Unit>
       <Unit filename="/home/ubuntu/workspace/WebAppCalassomys/src/webapp.cpp">
       </Unit>
       <Unit filename="/home/ubuntu/workspace/Calassomys/webapps/hello/src/hello.h">
-      </Unit>
-      <Unit filename="/home/ubuntu/workspace/Calassomys/webapps/hello/src/webappconfig.h">
       </Unit>
       <Unit filename="/home/ubuntu/workspace/Calassomys/webapps/hello/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />

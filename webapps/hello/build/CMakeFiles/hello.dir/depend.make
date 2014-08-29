@@ -5,8 +5,8 @@ CMakeFiles/hello.dir/src/hello.cpp.o: ../../../../WebAppCalassomys/include/webap
 CMakeFiles/hello.dir/src/hello.cpp.o: ../src/hello.cpp
 CMakeFiles/hello.dir/src/hello.cpp.o: ../src/hello.h
 
-CMakeFiles/hello.dir/src/webappconfig.cpp.o: ../../../../WebAppCalassomys/include/webapp.h
-CMakeFiles/hello.dir/src/webappconfig.cpp.o: ../src/hello.h
-CMakeFiles/hello.dir/src/webappconfig.cpp.o: ../src/webappconfig.cpp
-CMakeFiles/hello.dir/src/webappconfig.cpp.o: ../src/webappconfig.h
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o: ../../../../WebAppCalassomys/include/loadwebapp.h
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o: ../../../../WebAppCalassomys/include/webapp.h
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o: ../src/hello.h
+CMakeFiles/hello.dir/src/loadwebapp.cpp.o: ../src/loadwebapp.cpp
 

@@ -8,5 +8,5 @@ add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
 target_link_libraries(${PROJECT_NAME} WebAppCalassomys )
 
 if(UNIX)
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -fPIC -std=c++11")
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fPIC -std=c++11")
 endif()

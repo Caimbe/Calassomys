@@ -151,29 +151,29 @@ src/hello.cpp.s:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.cpp.s
 .PHONY : src/hello.cpp.s
 
-src/webappconfig.o: src/webappconfig.cpp.o
-.PHONY : src/webappconfig.o
+src/loadwebapp.o: src/loadwebapp.cpp.o
+.PHONY : src/loadwebapp.o
 
 # target to build an object file
-src/webappconfig.cpp.o:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/webappconfig.cpp.o
-.PHONY : src/webappconfig.cpp.o
+src/loadwebapp.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/loadwebapp.cpp.o
+.PHONY : src/loadwebapp.cpp.o
 
-src/webappconfig.i: src/webappconfig.cpp.i
-.PHONY : src/webappconfig.i
+src/loadwebapp.i: src/loadwebapp.cpp.i
+.PHONY : src/loadwebapp.i
 
 # target to preprocess a source file
-src/webappconfig.cpp.i:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/webappconfig.cpp.i
-.PHONY : src/webappconfig.cpp.i
+src/loadwebapp.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/loadwebapp.cpp.i
+.PHONY : src/loadwebapp.cpp.i
 
-src/webappconfig.s: src/webappconfig.cpp.s
-.PHONY : src/webappconfig.s
+src/loadwebapp.s: src/loadwebapp.cpp.s
+.PHONY : src/loadwebapp.s
 
 # target to generate assembly for a file
-src/webappconfig.cpp.s:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/webappconfig.cpp.s
-.PHONY : src/webappconfig.cpp.s
+src/loadwebapp.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/loadwebapp.cpp.s
+.PHONY : src/loadwebapp.cpp.s
 
 # Help Target
 help:
@@ -188,9 +188,9 @@ help:
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"
-	@echo "... src/webappconfig.o"
-	@echo "... src/webappconfig.i"
-	@echo "... src/webappconfig.s"
+	@echo "... src/loadwebapp.o"
+	@echo "... src/loadwebapp.i"
+	@echo "... src/loadwebapp.s"
 .PHONY : help
 
 

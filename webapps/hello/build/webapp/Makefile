@@ -115,6 +115,30 @@ WebAppCalassomys/fast:
 	cd /home/ubuntu/workspace/Calassomys/webapps/hello/build && $(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/build
 .PHONY : WebAppCalassomys/fast
 
+src/loadwebapp.o: src/loadwebapp.cpp.o
+.PHONY : src/loadwebapp.o
+
+# target to build an object file
+src/loadwebapp.cpp.o:
+	cd /home/ubuntu/workspace/Calassomys/webapps/hello/build && $(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/src/loadwebapp.cpp.o
+.PHONY : src/loadwebapp.cpp.o
+
+src/loadwebapp.i: src/loadwebapp.cpp.i
+.PHONY : src/loadwebapp.i
+
+# target to preprocess a source file
+src/loadwebapp.cpp.i:
+	cd /home/ubuntu/workspace/Calassomys/webapps/hello/build && $(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/src/loadwebapp.cpp.i
+.PHONY : src/loadwebapp.cpp.i
+
+src/loadwebapp.s: src/loadwebapp.cpp.s
+.PHONY : src/loadwebapp.s
+
+# target to generate assembly for a file
+src/loadwebapp.cpp.s:
+	cd /home/ubuntu/workspace/Calassomys/webapps/hello/build && $(MAKE) -f webapp/CMakeFiles/WebAppCalassomys.dir/build.make webapp/CMakeFiles/WebAppCalassomys.dir/src/loadwebapp.cpp.s
+.PHONY : src/loadwebapp.cpp.s
+
 src/webapp.o: src/webapp.cpp.o
 .PHONY : src/webapp.o
 
@@ -148,6 +172,9 @@ help:
 	@echo "... WebAppCalassomys"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/loadwebapp.o"
+	@echo "... src/loadwebapp.i"
+	@echo "... src/loadwebapp.s"
 	@echo "... src/webapp.o"
 	@echo "... src/webapp.i"
 	@echo "... src/webapp.s"

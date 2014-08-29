@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/hello.dir/src/hello.cpp.o"
-  "CMakeFiles/hello.dir/src/webappconfig.cpp.o"
+  "CMakeFiles/hello.dir/src/loadwebapp.cpp.o"
   "libhello.pdb"
   "libhello.so"
 )

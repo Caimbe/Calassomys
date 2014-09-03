@@ -19,10 +19,11 @@ void WebAppManager::configure(cppcms::service &srv)
     auto webappsNames = findWebApp();
     for(string& name: webappsNames)
     {
-        cout << "Loading: " << name << endl;
+        BOOSTER_INFO("calossomys") << "Loading: " << name;
         string path = settings().get<string>("calassomys.path_webapps") + "/" +name+ "/build/";
         WebAppPtr webApp = loadWebApp(path, name, srv);
-        attach(	webApp,
+        if(webApp)
+            attach(	webApp,
                 name,
                 "/"+name+"{1}", // mapping
                 "/"+name+"(/(.*))?", 1);   // dispatching
@@ -36,7 +37,7 @@ std::vector<std::string> WebAppManager::findWebApp()
     string strDirWebApps = settings().get<string>("calassomys.path_webapps");
     path dirWebApp(strDirWebApps);
     if (!exists(dirWebApp) || !is_directory(dirWebApp)) {
-        std::cerr << strDirWebApps << " not found" << std::endl;
+        BOOSTER_ERROR("calossomys") << strDirWebApps << " not found";
         return std::vector<std::string>();
     }
 
@@ -58,19 +59,19 @@ WebAppPtr WebAppManager::loadWebApp(std::string& path, std::string& name, cppcms
 {
     void *handle;
     handle = dlopen((path+PREFIX_LIB+name+SUFIX_LIB).c_str(), RTLD_NOW);
-    if (!handle)
+    if (handle)
     {
-        printf("The error is %s", dlerror());
+        typedef WebAppPtr create_t(cppcms::service&, std::string&);
+
+        create_t* creat=(create_t*)dlsym(handle,"create");
+        if (creat)
+        {
+            return creat(srv, name);
+        }
     }
 
-    typedef WebAppPtr create_t(cppcms::service&, std::string&);
-
-    create_t* creat=(create_t*)dlsym(handle,"create");
-    if (!creat)
-    {
-        cerr<<"The error is %s"<<dlerror();
-    }
-    return creat(srv, name);
+    BOOSTER_ERROR("calassomys") << dlerror();
+    return NULL;
 }
 
 }

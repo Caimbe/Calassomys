@@ -2,6 +2,7 @@
 #include <cppcms/applications_pool.h>
 #include <iostream>
 #include <fstream>
+#include <booster/log.h>
 #include "webappmanager.h"
 
 using namespace std;
@@ -19,6 +20,8 @@ int main(int argc,char ** argv)
         cppcms::service service(settings);
         settings["path_run_time"] = pathBase;
         service.applications_pool().mount(cppcms::applications_factory<WebAppManager>());
+
+        BOOSTER_NOTICE("calassomys") << "Server Up!";
         service.run();
     }
     catch(std::exception const &e) {
@@ -27,4 +30,6 @@ int main(int argc,char ** argv)
     catch(...) {
         std::cerr<<"Erro Desconhecido!"<<std::endl;
     }
+
+    BOOSTER_NOTICE("calassomys") << "Server Down!";
 }

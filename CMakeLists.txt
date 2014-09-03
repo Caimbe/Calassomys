@@ -6,7 +6,7 @@ include_directories(${Boost_INCLUDE_DIRS} ${WEB_APP_CALASSOMYS_PATH}/include)
 #add_subdirectory(${WEB_APP_CALASSOMYS_PATH} webapp)
 aux_source_directory(src SRC_LIST)
 add_executable(${PROJECT_NAME} ${SRC_LIST})
-target_link_libraries(${PROJECT_NAME} cppcms ${Boost_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} cppcms booster ${Boost_LIBRARIES})
 
 if(UNIX)
     add_definitions(-DSUFIX_LIB=".so" -DPREFIX_LIB="lib")

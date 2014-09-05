@@ -21,7 +21,17 @@ void WebAppManager::configure(cppcms::service &srv)
     {
         BOOSTER_INFO("calossomys") << "Loading: " << name;
         string path = settings().get<string>("calassomys.path_webapps") + "/" +name+ "/build/";
-        WebAppPtr webApp = loadWebApp(path, name, srv);
+        WebAppPtr webApp = 0;
+        try{
+            webApp = loadWebApp(path, name, srv);
+        }
+        catch(std::exception const &e) {
+            BOOSTER_ERROR("calassomys") << e.what()<<std::endl;
+            BOOSTER_ERROR("calassomys") << booster::trace(e);
+        }
+        catch(...) {
+            BOOSTER_ERROR("calassomys") << "Erro Desconhecido!";
+        }
         if(webApp)
             attach(	webApp,
                 name,

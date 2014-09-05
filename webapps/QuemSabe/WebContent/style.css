@@ -23,7 +23,11 @@ a{text-decoration:none;}
 .pos-absolute{position:absolute;}/* Position Absolute */
 .vertical-base{	vertical-align:baseline;}/* vertical align baseline */
 .vertical-top{	vertical-align:top;}/* vertical align top */
-.underline{	padding-bottom:5px;	border-bottom: 1px solid #555; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+.underline{	/* Add 5px bottom padding and a underline */
+	padding-bottom:5px;
+	border-bottom: 1px solid #555;
+	margin:0 0 20px 0;
+}
 nav.vertical ul li{	display:block;}/* vertical menu */
 nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:96%;}

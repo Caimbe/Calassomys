@@ -5,10 +5,9 @@
 #include <view.h>
 
 class Home : public calassomys::WebApp {
-    calassomys::View index;
 public:
     Home(cppcms::service &srv, cppcms::json::value& cfg);
-    void all();
+    void inicio();
 };
 
 

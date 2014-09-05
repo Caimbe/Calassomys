@@ -25,10 +25,11 @@ int main(int argc,char ** argv)
         service.run();
     }
     catch(std::exception const &e) {
-        std::cerr<<e.what()<<std::endl;
+        BOOSTER_ERROR("calassomys") << e.what()<<std::endl;
+        BOOSTER_ERROR("calassomys") << booster::trace(e);
     }
     catch(...) {
-        std::cerr<<"Erro Desconhecido!"<<std::endl;
+        BOOSTER_ERROR("calassomys") << "Erro Desconhecido!";
     }
 
     BOOSTER_NOTICE("calassomys") << "Server Down!";

@@ -212,12 +212,13 @@ form textarea{
 form input,
 form textarea,
 form input[type=submit]{
-	background:#2d2d2d;
 	border:1px solid #4d4d4d;
 	width:90%;
+	text-aling: center;
 }
 form input[type=submit]{
-	width:94%;
+	background:#2d2d2d;
+	width:90%;
 	color:#FFE04D;
 	padding:10px;
 }
@@ -231,6 +232,7 @@ header{
 header,
 footer{
 	background:#2d2d2d;
+	bottom: 0;
 }
 footer{
 	border-top:1px solid #5d5d5d;

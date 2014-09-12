@@ -1,13 +1,13 @@
 #include <loadwebapp.h>
 #include "home.h"
-#include "perguntar.h"
+#include "perguntaresponse.h"
 
 
 namespace calassomys {
     void LoadWebApp::loader()
     {
         attach( new Home(service(), settings), "/home");
-        attach( new Perguntar(service(), settings), "/perguntar");
+        attach( new PerguntaResponse(service(), settings), "/perguntar");
     }
 }
 

@@ -13,7 +13,7 @@ list(APPEND FULL_SRC
     ${DAO}
     ${MODEL} )
 add_library(${PROJECT_NAME} SHARED ${FULL_SRC})
-target_link_libraries(${PROJECT_NAME} WebAppCalassomys cppdb booster)
+target_link_libraries(${PROJECT_NAME} WebAppCalassomys mysqlcppconn booster )
 
 if(UNIX)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fPIC -std=c++11")

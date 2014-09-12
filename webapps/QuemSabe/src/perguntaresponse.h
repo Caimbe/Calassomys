@@ -5,6 +5,8 @@
 #include <view.h>
 #include "model/perguntamodel.h"
 
+using namespace calassomys;
+
 class PerguntaResponse : public calassomys::WebApp {
     PerguntaModel model;
 public:

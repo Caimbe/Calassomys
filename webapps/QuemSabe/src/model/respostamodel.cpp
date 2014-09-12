@@ -5,8 +5,14 @@ RespostaModel::RespostaModel()
     dao = Dao::getInstance();
 }
 
-void RespostaModel::novaResposta(string idPergunta, Resposta &resposta)
+long long RespostaModel::novaResposta(string idPergunta, Resposta &resposta)
 {
-    dao->insert(resposta);
+    return dao->insert(resposta);
 }
 
+
+
+shared_ptr<vector<Resposta> > RespostaModel::getRespostas(std::string idPergunta)
+{
+    return dao->select<Resposta>("resposta", "pergunta_id="+idPergunta);
+}

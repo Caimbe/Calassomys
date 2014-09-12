@@ -6,9 +6,10 @@
 class Resposta
 {
     long id;
-    string nome;
+    string autor;
     string resposta;
     string data;
+    long idPergunta;
 
 public:
     Resposta();
@@ -17,12 +18,14 @@ public:
 
     long getId() const;
     void setId(long value);
-    string getNome() const;
-    void setNome(const string &value);
+    string getAutor() const;
+    void setAutor(const string &value);
     string getResposta() const;
     void setResposta(const string &value);
     string getData() const;
     void setData(const string &value);
+    long getIdPergunta() const;
+    void setIdPergunta(long value);
 };
 
 #endif // RESPOSTA_H

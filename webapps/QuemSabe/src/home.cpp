@@ -14,7 +14,7 @@ void Home::inicio()
     calassomys::View perguntaView;
     perguntaView.setContent(config.get<string>("calassomys.webapp.web_content_path")+"pergunta.html");
     auto perguntas = model.getUltimasPerguntas();
-    for(Pergunta& pergunta: perguntas) {
+    for(Pergunta& pergunta: *perguntas) {
         vecItrNode vecNodes = perguntaView.getTagsByName("titulo");
         for(auto& node: vecNodes){
             perguntaView.setText(node, pergunta.getTitulo() );

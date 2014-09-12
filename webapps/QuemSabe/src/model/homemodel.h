@@ -9,7 +9,7 @@ class HomeModel
     PerguntaModel perguntaModel;
 public:
     HomeModel();
-    std::vector<Pergunta> getUltimasPerguntas();
+    shared_ptr<vector<Pergunta> > getUltimasPerguntas();
 };
 
 #endif // HOMEMODEL_H

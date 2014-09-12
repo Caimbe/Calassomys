@@ -15,8 +15,9 @@ public:
     PerguntaModel();
     int novaPergunta(Pergunta& pergunta);
     int novaResposta(string idPergunta, Resposta& resposta);
-    Pergunta getPergunta(string id);
-    std::vector<Pergunta> getUltimasPerguntas();
+    Pergunta getPergunta(string id);    
+    shared_ptr<vector<Resposta> > getRespostas(string idPergunta);
+    shared_ptr<vector<Pergunta> > getUltimasPerguntas();
 };
 
 #endif // PERGUNTAMODEL_H

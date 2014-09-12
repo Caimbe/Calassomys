@@ -1,9 +1,9 @@
    window.addEventListener("load",function() {
 	  // Set a timeout...
-	  setTimeout(function(){
+      setTimeout(function(){
 	    // Hide the address bar!
 	    window.scrollTo(0, 1);
-	  }, 0);
+      }, 0);
 
    $('.search-box,.menu' ).hide();   
    $('.options li:first-child').click(function(){	

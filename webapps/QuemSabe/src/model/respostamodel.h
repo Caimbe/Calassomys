@@ -9,7 +9,8 @@ class RespostaModel
     DaoPrt dao;
 public:
     RespostaModel();
-    void novaResposta(string idPergunta, Resposta& resposta);
+    long long novaResposta(string idPergunta, Resposta& resposta);
+    shared_ptr<vector<Resposta> > getRespostas(string idPergunta);
 };
 
 #endif // RESPOSTAMODEL_H

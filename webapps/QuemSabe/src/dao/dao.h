@@ -23,24 +23,24 @@ class Dao
     Dao();
 public:
     static DaoPrt getInstance();
-    template<typename type> std::vector<type> select(string table, string where="", string options="")
+    template<typename type> shared_ptr< vector<type> > select(string table, string where="", string options="")
     {
-        std::vector<type> vec;
+        shared_ptr< vector<type> > vec(new vector<type>);
         string sql = "SELECT * FROM "+table;
         sql += where.empty()?where:" WHERE "+where;
         sql += options.empty()?options:" OPTIONS "+options;
         unique_ptr<sql::Statement> stmt( connection->createStatement() );
         unique_ptr<sql::ResultSet> rs( stmt->executeQuery(sql) );
         while (rs->next()) {
-            vec.push_back( type(*rs) );
+            vec->push_back( type(*rs) );
         }
         rs->close();
         return vec;
     }
 
-    template<typename type> int insert(type obj)
+    template<typename type> long long insert(type obj)
     {
-        int id = -1;
+        long long id = -1;
         string sql = "INSERT INTO ";
         obj >> sql;
         unique_ptr<sql::Statement> stmt( connection->createStatement() );

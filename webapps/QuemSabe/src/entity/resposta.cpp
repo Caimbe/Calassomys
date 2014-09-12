@@ -1,5 +1,22 @@
 #include "resposta.h"
 
+Resposta::Resposta()
+{
+}
+
+Resposta::Resposta(sql::ResultSet &rs)
+{
+    id = rs.getInt64(1);
+    autor = rs.getString(2);
+    resposta = rs.getString(3);
+    data = rs.getString(4);
+}
+
+void Resposta::operator >>(string &columnsValue)
+{
+    columnsValue+="resposta(autor, resposta, pergunta_id) ";
+    columnsValue+="VALUES('"+autor+"', '"+resposta+"', '"+to_string(idPergunta)+"') ";
+}
 
 long Resposta::getId() const
 {
@@ -11,14 +28,14 @@ void Resposta::setId(long value)
     id = value;
 }
 
-string Resposta::getNome() const
+string Resposta::getAutor() const
 {
-    return nome;
+    return autor;
 }
 
-void Resposta::setNome(const string &value)
+void Resposta::setAutor(const string &value)
 {
-    nome = value;
+    autor = value;
 }
 
 string Resposta::getResposta() const
@@ -40,20 +57,15 @@ void Resposta::setData(const string &value)
 {
     data = value;
 }
-Resposta::Resposta()
+
+
+
+long Resposta::getIdPergunta() const
 {
+    return idPergunta;
 }
 
-Resposta::Resposta(sql::ResultSet &rs)
+void Resposta::setIdPergunta(long value)
 {
-    id = rs.getInt64(1);
-    nome = rs.getString(2);
-    resposta = rs.getString(3);
-    data = rs.getString(4);
-}
-
-void Resposta::operator >>(string &columnsValue)
-{
-    columnsValue+="resposta(nome, resposta) ";
-    columnsValue+="VALUES('"+nome+"', '"+resposta+"') ";
+    idPergunta = value;
 }

@@ -4,7 +4,7 @@ HomeModel::HomeModel()
 {
 }
 
-std::vector<Pergunta> HomeModel::getUltimasPerguntas()
+shared_ptr<vector<Pergunta> > HomeModel::getUltimasPerguntas()
 {
     return perguntaModel.getUltimasPerguntas();
 }
